@@ -12,13 +12,14 @@ Tags:         light, dark, two-columns, right-sidebar, responsive-layout, access
 Text Domain:  twentytwentythreealjuritv
 */
 // @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&family=Rokkitt:ital,wght@0,640;1,640&display=swap');
-@import url(https://fonts.googleapis.com/css2?family=Brygada+1918:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Montserrat+Alternates:ital,wght@0,300;0,400;0,500;0,900;1,300;1,400;1,500;1,900&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Brygada+1918:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Montserrat:ital,wght@0,300;0,400;0,500;0,900;1,300;1,400;1,500;1,900&display=swap);
+@import url(https://fonts.googleapis.com/icon?family=Material+Icons+Outlined);
 
 /*Variables generales*/
 $r: 1.618;
 $w: 1rem;
 $accent-font: 'Brygada 1918', serif;
-$main-font:  'Montserrat Alternates', sans-serif;
+$main-font: 'Montserrat', sans-serif;
 
 /*Responsive*/
 $xs: 600px;
@@ -79,12 +80,12 @@ h6 {
 }
 
 .margin-vert {
-    margin: $w*$r auto!important;
+    margin: $w*$r auto !important;
 }
 
 .site-title {
     font-size: $w*$r;
-    font-weight: 640;
+    font-weight: 600;
 }
 
 .site-tagline {
@@ -136,12 +137,66 @@ h6 {
     margin: 0 auto !important;
 }
 
+.site-inner-container {
+    max-width: $m;
+    margin: 0 auto;
+    padding: 1rem 0;
+}
+
+.category-header {
+    figure {
+        border-radius: 1rem/$r;
+    }
+}
+
+.project-img {
+    border-radius: 1rem*$r;
+    overflow: hidden;
+    margin: 2rem 0;
+}
+
+.site-tag {
+    display: flex;
+
+    a {
+        text-decoration: none;
+        font-family: $accent-font;
+        font-size: 1rem;
+        padding: 0 1rem/$r;
+        color: $base;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: $primary;
+        height: 36px !important;
+        border-radius: 20px;
+        border: 2px solid $primary;
+        transition: 0.3s;
+
+        &:hover {
+            border: 2px solid $accent;
+            background-color: $base;
+            color: $accent;
+
+        }
+    }
+}
+
+.aux-btn {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    span {
+        margin-right: 1rem/$r;
+    }
+}
+
 .largecard {
     display: flex;
     flex-direction: column;
     gap: $w;
     border: 1px solid $primary;
-    border-radius: 7px;
+    border-radius: 1rem/$r;
     overflow: hidden;
     position: relative;
     width: 100%;
@@ -215,16 +270,16 @@ body .is-layout-flow>*+* {
 
 .wp-block-post-template.is-flex-container {
     @media only screen and (max-width: $xs) {
-        gap: 1rem*$r!important;
+        gap: 1rem*$r !important;
     }
 
     @media only screen and (min-width: $s) {
-        gap: 1rem!important;
+        gap: 1rem !important;
         justify-content: space-between;
     }
 
     @media only screen and (min-width: $m) {
-        gap: 1rem!important;
+        gap: 1rem !important;
     }
 }
 
@@ -232,18 +287,19 @@ body .is-layout-flow>*+* {
     &:last-child {
         margin: 0 auto 0 0;
     }
+
     @media only screen and (max-width: $xs) {
-        height: calc(100vw - 2*$w*$r*$r)!important;
+        height: calc(100vw - 2*$w*$r*$r) !important;
     }
 
     @media only screen and (min-width: $s) {
-        width: calc(50% - 0.625rem)!important;
-        height: calc((100vw - 2*$w*$r*$r) * .5)!important;
+        width: calc(50% - 0.625rem) !important;
+        height: calc((100vw - 2*$w*$r*$r) * .5) !important;
     }
 
     @media only screen and (min-width: $m) {
         width: calc(33% - .6rem) !important;
-        height: calc(1160px/3 - 2*$w*$r)!important;
+        height: calc(1160px/3 - 2*$w*$r) !important;
     }
 }
 
@@ -317,7 +373,7 @@ body .is-layout-flow>*+* {
         max-width: 216px !important;
         max-height: 133px !important;
         border: 1px solid $primary;
-        border-radius: 7px;
+        border-radius: 1rem/$r;
         overflow: hidden;
         position: relative;
         padding: $w;
@@ -425,7 +481,7 @@ body .is-layout-flow>*+* {
         max-width: 216px !important;
         max-height: 133px !important;
         border: 1px solid $primary;
-        border-radius: 7px;
+        border-radius: 1rem/$r;
         overflow: hidden;
         position: relative;
         padding: $w;
