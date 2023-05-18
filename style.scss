@@ -157,12 +157,14 @@ h6 {
 
 .site-tag {
     display: flex;
+    flex-wrap: wrap;
+    gap: 1rem/$r;
 
     a {
         text-decoration: none;
         font-family: $accent-font;
         font-size: 1rem;
-        padding: 0 1rem/$r;
+        padding: 0 1rem;
         color: $base;
         display: flex;
         justify-content: center;
@@ -172,6 +174,8 @@ h6 {
         border-radius: 20px;
         border: 2px solid $primary;
         transition: 0.3s;
+        opacity: .88;
+
 
         &:hover {
             border: 2px solid $accent;
@@ -186,8 +190,18 @@ h6 {
     display: flex;
     align-items: center;
     font-size: 14px;
-    span {
-        margin-right: 1rem/$r;
+    &:hover {
+        cursor: pointer;
+    }
+
+    a {
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+
+        span {
+            margin-right: 1rem/$r;
+        }
     }
 }
 
@@ -226,6 +240,47 @@ h6 {
         width: 100%/$r;
         padding: 0 $w*$r;
         bottom: $w;
+    }
+}
+
+.my-work {
+    background: $primary;
+    border-radius: 1rem;
+    padding: 1rem*$r;
+    margin: 1rem*$r*$r*$r 0 !important;
+
+    @media only screen and (min-width: $m) {
+        padding: 1rem*$r*$r;
+    }
+
+    &__title {
+        font-size: 1rem*$r;
+        color: $base;
+        opacity: .88;
+    }
+
+    &__text {
+        color: $base;
+        opacity: .88;
+    }
+
+    &__person {
+        display: flex;
+        flex-direction: row;
+
+        figure {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            overflow: hidden;
+        }
+
+        p,
+        h4 {
+            font-size: $w;
+            color: $base;
+            opacity: .88;
+        }
     }
 }
 
@@ -301,6 +356,12 @@ body .is-layout-flow>*+* {
         width: calc(33% - .6rem) !important;
         height: calc(1160px/3 - 2*$w*$r) !important;
     }
+}
+
+.wp-block-post-terms .wp-block-post-terms__separator {
+    display: none;
+    white-space: break-spaces;
+    width: 0px !important;
 }
 
 

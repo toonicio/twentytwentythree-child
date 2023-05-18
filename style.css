@@ -105,12 +105,14 @@ h6 {
 
 .site-tag {
   display: flex;
+  flex-wrap: wrap;
+  gap: 0.6180469716rem;
 }
 .site-tag a {
   text-decoration: none;
   font-family: "Brygada 1918", serif;
   font-size: 1rem;
-  padding: 0 0.6180469716rem;
+  padding: 0 1rem;
   color: #fefefe;
   display: flex;
   justify-content: center;
@@ -120,6 +122,7 @@ h6 {
   border-radius: 20px;
   border: 2px solid #30243F;
   transition: 0.3s;
+  opacity: 0.88;
 }
 .site-tag a:hover {
   border: 2px solid #F14154;
@@ -132,7 +135,15 @@ h6 {
   align-items: center;
   font-size: 14px;
 }
-.aux-btn span {
+.aux-btn:hover {
+  cursor: pointer;
+}
+.aux-btn a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+.aux-btn a span {
   margin-right: 0.6180469716rem;
 }
 
@@ -169,6 +180,43 @@ h6 {
   width: 61.804697157%;
   padding: 0 1.618rem;
   bottom: 1rem;
+}
+
+.my-work {
+  background: #30243F;
+  border-radius: 1rem;
+  padding: 1.618rem;
+  margin: 4.235801032rem 0 !important;
+}
+@media only screen and (min-width: 768px) {
+  .my-work {
+    padding: 2.617924rem;
+  }
+}
+.my-work__title {
+  font-size: 1.618rem;
+  color: #fefefe;
+  opacity: 0.88;
+}
+.my-work__text {
+  color: #fefefe;
+  opacity: 0.88;
+}
+.my-work__person {
+  display: flex;
+  flex-direction: row;
+}
+.my-work__person figure {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.my-work__person p,
+.my-work__person h4 {
+  font-size: 1rem;
+  color: #fefefe;
+  opacity: 0.88;
 }
 
 /*Hacks y mierdas*/
@@ -244,6 +292,12 @@ body .is-layout-flow > * + * {
     width: calc(33% - 0.6rem) !important;
     height: calc(386.6666666667px - 3.236rem) !important;
   }
+}
+
+.wp-block-post-terms .wp-block-post-terms__separator {
+  display: none;
+  white-space: break-spaces;
+  width: 0px !important;
 }
 
 /* MEDIA QUERIES */
