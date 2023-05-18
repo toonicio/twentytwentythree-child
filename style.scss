@@ -12,13 +12,14 @@ Tags:         light, dark, two-columns, right-sidebar, responsive-layout, access
 Text Domain:  twentytwentythreealjuritv
 */
 // @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&family=Rokkitt:ital,wght@0,640;1,640&display=swap');
-@import url(https://fonts.googleapis.com/css2?family=Brygada+1918:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Montserrat:ital,wght@0,300;0,400;0,500;0,900;1,300;1,400;1,500;1,900&display=swap);
+// @import url(https://fonts.googleapis.com/css2?family=Brygada+1918:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Montserrat:ital,wght@0,300;0,400;0,500;0,900;1,300;1,400;1,500;1,900&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,700;0,9..144,800;1,9..144,400;1,9..144,700;1,9..144,800&family=Montserrat:ital,wght@0,300;0,400;0,500;0,900;1,300;1,400;1,500;1,900&display=swap);
 @import url(https://fonts.googleapis.com/icon?family=Material+Icons+Outlined);
 
 /*Variables generales*/
 $r: 1.618;
 $w: 1rem;
-$accent-font: 'Brygada 1918', serif;
+$accent-font: 'Fraunces', serif;
 $main-font: 'Montserrat', sans-serif;
 
 /*Responsive*/
@@ -77,6 +78,7 @@ h4,
 h5,
 h6 {
     font-family: $accent-font;
+    font-weight: 800;
 }
 
 .margin-vert {
