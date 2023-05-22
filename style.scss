@@ -146,6 +146,7 @@ h6 {
 }
 
 .category-header {
+    padding: 0 0 3rem 0;
     figure {
         border-radius: 1rem/$r;
     }
@@ -364,6 +365,21 @@ body .is-layout-flow>*+* {
     display: none;
     white-space: break-spaces;
     width: 0px !important;
+}
+
+// FileBird Mod //
+#filebird-document-library {
+    font-size: $w!important;
+}
+
+.fbdl-title {
+    svg {
+        display: none!important;
+    }
+}
+
+.fbdl-layout-control {
+    display: none;
 }
 
 

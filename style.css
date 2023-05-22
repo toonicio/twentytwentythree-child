@@ -94,6 +94,9 @@ h6 {
   padding: 1rem 0;
 }
 
+.category-header {
+  padding: 0 0 3rem 0;
+}
 .category-header figure {
   border-radius: 0.6180469716rem;
 }
@@ -299,6 +302,18 @@ body .is-layout-flow > * + * {
   display: none;
   white-space: break-spaces;
   width: 0px !important;
+}
+
+#filebird-document-library {
+  font-size: 1rem !important;
+}
+
+.fbdl-title svg {
+  display: none !important;
+}
+
+.fbdl-layout-control {
+  display: none;
 }
 
 /* MEDIA QUERIES */
